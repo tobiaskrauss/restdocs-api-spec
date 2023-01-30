@@ -1,27 +1,17 @@
 package com.epages.restdocs.apispec.sample;
 
-import org.springframework.hateoas.Identifiable;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import java.math.BigDecimal;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
-public class Product implements Identifiable<Long> {
-
-    public Product(String name, BigDecimal price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    private Product() {
-    }
+public class Product {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)

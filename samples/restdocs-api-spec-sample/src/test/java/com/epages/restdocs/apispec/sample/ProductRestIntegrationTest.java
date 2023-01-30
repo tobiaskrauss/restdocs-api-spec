@@ -27,7 +27,7 @@ import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuild
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.patch;
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
-import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
+import static org.springframework.restdocs.request.RequestDocumentation.queryParameters;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -73,7 +73,7 @@ public class ProductRestIntegrationTest extends BaseIntegrationTest {
                                 linkWithRel("profile").ignored()
                         ),
                         requestHeaders(headerWithName("accept").description("accept header")),
-                        requestParameters(
+                        queryParameters(
                                 parameterWithName("page").description("The page to be requested."),
                                 parameterWithName("size").description("Parameter determining the size of the requested page."),
                                 parameterWithName("sort").description("Information about sorting items.")

@@ -1,8 +1,8 @@
 package com.epages.restdocs.apispec.sample;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
+import org.springframework.hateoas.server.EntityLinks;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -26,7 +26,7 @@ class BaseIntegrationTest {
 
     String productId;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         cartsRepository.deleteAll();
         productRepository.deleteAll();
